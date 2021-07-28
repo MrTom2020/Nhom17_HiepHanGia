@@ -1,0 +1,86 @@
+#include <MQ135.h>//Thêm thư viện
+
+#include <DHT.h>//Thêm thư viện
+
+#include <SoftwareSerial.h>//Thêm thư viện
+#include <ESP8266WiFi.h>//Thêm thư viện
+#include "FirebaseESP8266.h"//Thêm thư viện
+#include <ArduinoJson.h>//Thêm thư viện
+
+#define WIFI_SSID "Bún Đậu Tỵ"// tên wifi
+#define WIFI_PASSWORD "BUNDAUTY"// Mật khẩu wifi
+#define FIERBASE_HOST "laptrinhnhung-9289f-default-rtdb.firebaseio.com"
+#define FIREBASE_AUTH "F8UzDMZRiC1RKeRmydxbdhWQzVu8x36RC2AAihI2"
+#define DHTTYPE DHT11
+#define DHTPIN 2
+DHT dht(DHTPIN, DHTTYPE);
+FirebaseData firebaseData;
+String path="/";
+FirebaseJson json;
+byte x=0;
+String da="";
+String gas;
+String co2;
+String clkk;
+int dem = 0;
+bool stringComplete = false;
+int a = 1, b = 0, c = 0, d = 0;
+long last = 0;
+long last1 = 0;
+long last2 = 0;
+int vtt;
+//cảm biến
+//
+void setup(){
+  pinMode(D1, OUTPUT);//thiết đặt chân D1 là OUTPUT
+  pinMode(D2, OUTPUT);//thiết đặt chân D2 là OUTPUT
+  pinMode(D3, OUTPUT);//thiết đặt chân D3 là OUTPUT
+  pinMode(D4, OUTPUT);//thiết đặt chân D4 là OUTPUT
+  pinMode(D5, OUTPUT);//thiết đặt chân D5 là OUTPUT
+  pinMode(D6, OUTPUT);//thiết đặt chân D6 là OUTPUT
+  last = millis();
+  Serial.begin(9600);//Mở serial
+  dht.begin(); // Khởi động cảm biến
+  WiFi.begin(WIFI_SSID,WIFI_PASSWORD);
+  while (WiFi.status() != WL_CONNECTED) {
+    //Serial.print(".!.");
+    delay(500);// chờ 0.5s khi kết nối thất bại
+  }
+  //đọc dth
+  //Khởi tạo firebase
+  Firebase.begin(FIERBASE_HOST, FIREBASE_AUTH);
+  //Firebase.ReconnectWiFI(true);
+  if(!Firebase.beginStream(firebaseData, path))
+  {
+    //Serial.println("REASON: " + firebaseData.errorReason());
+    //Serial.println(".");
+  }
+  //Serial.print("connected: ");
+  //Serial.println(WiFi.localIP());
+}
+void loop()
+{
+    guidata();
+ 
+}
+void guidata()
+{
+    int doam  = dht.readHumidity();// Đọc giá trị nhiệt độ từ cảm biến
+    int nhietdo  = dht.readTemperature();// Đọc giá trị độ ẩm từ cảm biến
+    float g = analogRead(A0);//// Đọc giá trị khí gas
+    if(!isnan(doam))//kiểm tra dữ liệu doam có phải dạng số không
+    {
+      Firebase.setString(firebaseData, path+ "/Data/Độ ẩm", String(doam));
+    }
+    if(!isnan(nhietdo))//kiểm tra dữ liệu nhietdo có phải dạng số không
+    {
+      Firebase.setString(firebaseData, path+ "/Data/Nhiệt độ", String(nhietdo));
+ 
+    }
+    if(!isnan(g))//kiểm tra dữ liệu g có phải dạng số không
+    {
+      Firebase.setString(firebaseData, path+ "/Data/Khí Gas", String(g));
+    }
+   delay(500);
+ 
+}

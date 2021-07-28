@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">FAT</string>
+    <string name="use">Account</string>
+    <string name="pass">Password</string>
+    <string name="dangnhap">Login</string>
+    <string name="fb">Facebook</string>
+    <string name="GG">Google</string>
+    <string name="xnu">Your username</string>
+    <string name="xnp">Your password</string>
+    <string name="h">Hour</string>
+    <string name="pm">Pm 2.5:</string>
+    <string name="dt">Date</string>
+    <string name="aqi">AQI</string>
+</resources>

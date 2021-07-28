@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Signup"
+    android:background="@drawable/tuybiennut3">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="696dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="17dp"
+        android:background="@drawable/tuybn4">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="354dp"
+            android:layout_height="52dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="114dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:text="REGISTER AN ACCOUNT"
+            android:textAlignment="center"
+            android:textColor="#F1CB0C"
+            android:textSize="20dp"
+            android:textStyle="italic|bold" />
+
+        <EditText
+            android:id="@+id/edtten"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView2"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="19dp"
+            android:ems="10"
+            android:hint="Email login...."
+            android:inputType="textEmailSubject" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView2"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="33dp"
+            android:layout_marginEnd="-129dp"
+            android:text="User name"
+            android:textColor="#F1CB0C" />
+
+        <EditText
+            android:id="@+id/edtmk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtten"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="18dp"
+            android:ems="10"
+            android:hint="Login Password"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/edtdiachi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtmk"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="33dp"
+            android:layout_marginEnd="18dp"
+            android:ems="10"
+            android:hint="Address Information"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/editTextDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtmk"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="110dp"
+            android:layout_marginEnd="21dp"
+            android:ems="10"
+            android:hint="Enter your Date of Birth"
+            android:inputType="date" />
+
+        <Button
+            android:id="@+id/btnthoat"
+            android:layout_width="138dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextDate"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="107dp"
+            android:background="@drawable/tuybiennut"
+            android:text="Exit"
+            android:textColor="#F1CB0C" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView4"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="54dp"
+            android:layout_marginEnd="-219dp"
+            android:text="Address"
+            android:textColor="#F1CB0C" />
+
+        <Button
+            android:id="@+id/btndd"
+            android:layout_width="143dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextDate"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="107dp"
+            android:layout_toEndOf="@+id/btnthoat"
+            android:background="@drawable/tuybiennut"
+            android:text="Agree"
+            android:textColor="#F1CB0C" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView5"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="62dp"
+            android:text="Date of birth"
+            android:textColor="#F1CB0C" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView3"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="-297dp"
+            android:text="Password"
+            android:textColor="#F1CB0C" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="161dp"
+            android:layout_height="121dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="118dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="91dp"
+            app:srcCompat="@drawable/us" />
+    </RelativeLayout>
+</RelativeLayout>

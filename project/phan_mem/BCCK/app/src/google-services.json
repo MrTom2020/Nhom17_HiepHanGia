@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "732321003143",
+    "project_id": "baocaock-29261",
+    "storage_bucket": "baocaock-29261.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:732321003143:android:2b9bba7476d14b6385aa22",
+        "android_client_info": {
+          "package_name": "vn.edu.tdmu.lethanhhiep.bcck"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "732321003143-bt8nls3bb8i1rb05htcvsvnmm5tvktrd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4DREHDpPx9GtsEJgp5kifMLOK9lOyqbA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "732321003143-bt8nls3bb8i1rb05htcvsvnmm5tvktrd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
